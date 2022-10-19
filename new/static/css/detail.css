@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    color: rgb(236, 235, 228);
+    font-family: sans-serif;
+}
+.home{
+    margin-left:600px;
+    padding: auto;
+    position: fixed;
+    
+}
+
+/* Main Divs */
+.content {
+    display: flex;
+}
+
+
+h1{
+    text-align: center;
+    margin-left: 200px;
+    margin-top: 40px;
+    background: gray;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow:-8px -9px 30px black    
+
+}
+ .homebtn{
+    margin-left: 50px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    text-decoration: none
+}
+
+/* Sub Divs */
+
+
+
+form{
+    display: flex;
+    flex: 0.4 1 auto;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-top:10px ;
+    color: black;
+}
+
+/* Inside Sub Divs */
+
+.image img{
+   width: 400px;
+}
+
+
+
+/* Form's CSS */
+.big{
+    margin-top: 10px;
+    background: gray;
+    color: white;
+    border-radius: 15px;
+    box-shadow:-8px -9px 30px black    
+    
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:center;
+    font-size: 25px;
+    margin: 14px;
+   
+}
+
+.input1{
+    line-height: 2;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 300px;
+    margin-left: 80px
+}
+button{
+     font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 13px;
+    width: 170px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover{
+    background: gray;
+    transition: 0.7s;
+}

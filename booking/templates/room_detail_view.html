@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Detail</title>
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="{% static 'css/detail1.css' %}">
+
+</head>
+
+<body>
+
+
+<!-- navbar -->
+<header class="headerest">
+    <a href="#header" class="logo1" style="font-family:Lucida Handwriting; text-decoration:none; color:white; ">Mandarin Oriental</a>
+    <div class ="menu-toggle"></div>
+    <nav>
+        <!-- <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#rooms">Booking</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="static\Login\index.html">Login</a></li>
+        </ul> -->
+    </nav>
+    <div class="clearfix"></div>
+</header>
+<script
+src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.menu-toggle').click(function(){
+        $('.menu-toggle').toggleClass('active')
+        $('nav').toggleClass('active')
+    })
+})
+</script>
+
+    <!----end navbar----->
+    <div class="content">
+        
+
+    
+
+        <!-- Room Details -->
+        <div class="room">
+
+            <!-- Div 1: Back to Home -->
+            <div class="home">
+            </div>
+
+            <!-- Div 2: Room Information -->
+            <div class="room-info">
+              
+                <h1>{{room_category}}</h1><br>
+            </div>
+            <a href="http://127.0.0.1:8000/" class="homebtn"><button type="submit" class="homebtn" >HOME</button></a>
+            <!-- Div 3: Room Booking Form -->
+            <form id="booking-form" action="" method="POST">
+
+                {% csrf_token %}
+                <div class="big">
+                <!-- Input Div -->
+                <div class="input-div">
+                    <label for="id_check_in">Check In : </label>
+                    <input class="input1" type="datetime-local" id="id_check_in" name="check_in">
+                </div>
+
+                <!-- Input Div -->
+                <div class="input-div">
+                    <label for="id_check_out">Check Out : </label>
+                    <input class="input1" type="datetime-local" id="id_check_out" name="check_out">
+                </div>
+
+                <!-- Input Div -->
+                <div class="input-div">
+                    <button type="submit">Book the Room</button>
+                </div>
+                </div>
+            </form>
+
+        </div> <!-- END Room Div -->
+
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2 class="foot">About Us</h2>
+                <p style="font-family: Arial Rounded MT;">One of the most luxurious hotels in the Middle East, it contains many rooms.<br>
+                    A restaurant and a gym.<br>
+                    With many services.<br>
+                    located in the center of the country.</p> <br>
+                <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2 class="foot">Quick Links</h2>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Terms & Consitions</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+            <h2 class="foot">Contact Info</h2>
+            <ul class="info">
+                <li><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <span>12 Sidi Gaber ST<br>
+                    Alexandria<br>Egypt</span></li><br>
+                
+                 <li><span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                     +2001003405064</li><br>
+                
+                    <li><span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span>amgad123@gmail.com</span></li>
+                
+                
+                </ul>
+            
+        
+        </div>
+        
+            </footer>
+            <!-- end of footer -->
+       
+</body>
+
+</html>

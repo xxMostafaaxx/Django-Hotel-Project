@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --transition: all 0.7s ease;
+    --blue: #0099ff;
+    --dark: #292826;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.6;
+}
+
+
+/* nav bar*/
+
+.headerest{
+    position: relative;
+    width:100%;
+    margin:0px auto;
+    padding:2px;
+    background: rgb(0, 0, 0);
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    font-family: 'Poppons',sans-serif;
+    position:sticky;
+    top: 0px;
+    text-transform: uppercase;
+    z-index: 1;
+
+
+}
+.logo1{
+    color:#ffffff ;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding:0 20px ;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight:700 ;
+    text-decoration: none;
+
+
+}
+nav{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 3px;
+}
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    background: #0099ff;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 10px
+}
+@media (max-width:1200px)
+{
+    header{
+        margin:20px;
+    }
+}
+@media (max-width:768px)
+{
+    .menu-toggle{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background: rgb(0, 0, 0);
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #0099ff;
+    }
+    .menu-toggle:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-toggle.active:before{
+        content: '\f00d';
+    }
+   
+    nav{
+        display: none
+    }
+     nav.active{
+        display: block;
+        width: 100%;
+    }
+    nav.active ul{
+        display: block;
+    }
+    nav.active ul li{
+        margin: 0;
+    }
+}
+
+/*end nav bar*/
+
+.h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 140px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn:hover{
+    opacity: 0.85;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3, h4, h5, h6{
+    padding:  0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+@media(max-width: 500px){
+    body{
+        font-size: 14px;
+    }
+}
+
+/* header */
+.header{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("https://coolwallpapers.me/picsup/2634364-costa-adeje-gran-hotel-4k-amazing-hd-desktop-wallpaper.jpg") center/cover no-repeat;
+    min-height: 100vh;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+/* Head 1*/
+
+.header1{
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5)), url("https://www.tutorialspoint.com/food_and_beverage_services/images/assistant_food_and_beverage_service_manager.jpg") center/cover no-repeat;
+    color: #fff;
+    width: 700px;
+    height: 375px;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right:30px;
+    margin-bottom:50px ;
+    margin-top:20px ;
+    float: left;
+    display:block;
+    transition: var(--transition);
+
+}
+.header1:hover{
+        transform: translateY(-18px);
+}
+
+/* Head 2*/
+
+.header2{
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5)), url("https://adwallpapers.xyz/uploads/posts/73173-swimming-pool-in-hotel-4k-ultra-hd-wallpaper__cityscapes.jpg") center/cover no-repeat;
+    color: #fff;
+    width: 700px;
+    height: 375px;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-bottom:50px ;
+    margin-top:20px ;
+    float: left;
+    display:block;
+    transition: var(--transition);
+
+}
+.header2:hover{
+        transform: translateY(-18px);
+}
+
+/*Head 3*/
+
+.header3{
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5)), url("https://ak.picdn.net/shutterstock/videos/9482729/thumb/1.jpg") center/cover no-repeat;
+    color: #fff;
+    width: 700px;
+    height: 375px;
+    border-radius: 30px;
+    margin-right: 25px;
+    margin-left: 30px;
+    margin-bottom:50px ;
+    margin-top:20px ;
+    float: left;
+    display:block;
+    transition: var(--transition);
+
+}
+.header3:hover{
+        transform: translateY(-18px);
+}
+
+/*Head 4*/
+
+.header4{
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5)), url("https://www.asmag.com/upload/pic/case/43237.6783544.jpg") center/cover no-repeat;
+    color: #fff;
+    width: 700px;
+    height: 375px;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-bottom:50px ;
+    margin-top:20px ;
+    float: left;
+    display:block;
+    transition: var(--transition);
+
+}
+.header4:hover{
+        transform: translateY(-18px);
+}
+
+.p1{
+    padding-top: 20%;
+    text-align: center;
+    font-family: Copperplate Gothic;
+    font-size: 30px;
+    margin: 20px
+}
+.p2{
+    text-align: center;
+    font-size: 16px;
+    margin: 20px;
+    font-family: Copperplate Gothic;
+    font-style: Bold;
+}
+
+
+.head-bottom{
+    flex: 1;
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+.head-bottom h2{
+    padding: 22px 0;
+    font-size: 44px;
+    border-bottom: 1px solid #fff;
+    margin-top: 30px
+}
+.head-bottom p{
+    opacity: 0.8;
+    font-size: 25px;
+    margin: 45px auto;
+    text-align: center
+}
+.head-btn{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    background: transparent;
+    padding: 13px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+@media(max-width: 500px){
+    .head-btn{
+        font-size: 17px;
+    }
+    .head-bottom h2{
+        font-size: 28px;
+    }
+    .head-bottom p{
+        font-size: 17px;
+        margin: 20px auto;
+    }
+}
+
+
+/** title */
+.title{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: var(--blue);
+    border-bottom: 5px solid var(--dark);
+    width: 235px;
+    margin: 15px 0;
+}
+
+.sec-width{
+    width: 85vw;
+    margin: 0 auto!important;
+}
+
+/* service */
+.services{
+    margin: 40px 0;
+}
+.service{
+    display: flex;
+    margin: 30px 0;
+}
+.service-icon{
+    flex: 30%;
+    align-self: flex-start;
+    font-size: 30px;
+    color: black;
+}
+.service-content{
+    padding-left: 20px;
+}
+.service-content p{
+    color: black;
+    margin-right: 80px;
+    margin-bottom: 30px;
+    font-size: 16px
+}
+.service-content h2{
+    opacity: 0.7;
+    color: #0099ff
+}
+.service-content button{
+    margin-left: 0;
+    margin-right: 0;
+    background: var(--blue);
+    color: #fff;
+}
+@media(min-width: 992px){
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+    .title h2{
+        font-size: 30px!important;
+    }
+}
+@media(max-width: 500px){
+    .title h2{
+        font-size: 24px;
+    }
+}
+
+/* rooms */
+.a{
+    text-decoration: none;
+}
+.roomsh2{
+    margin-top:900px;
+    
+}
+.rooms{
+    margin: 20px 0;
+    
+}
+.room{
+    margin: 45px 0;
+    padding-bottom: 5px;
+    background: var(--dark);
+    border-radius: 30px;
+    
+}
+.room-text{
+    padding: 10px 30px;
+    color:white
+}
+.room-text h3{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    background:black;
+    border-radius: 10pc
+}
+.room-text ul{
+    list-style-type: none;
+    margin: 15px 0;
+}
+.room-text ul li{
+    padding: 7px 0;
+}
+.room-text ul li i{
+    color: var(--white);
+    margin-right: 10px;
+    font-size: 20px
+}
+.rate{
+    opacity: 0.8;
+    color: red
+}
+.rate span{
+    font-size: 30px;
+    font-weight: 1000;
+    color: red
+}
+.room-image{
+    overflow: hidden;
+}
+.room-image img{
+    transition: var(--transition);
+    border-radius: 30px;
+    
+}
+.room-image:hover img{
+    transform: scale(1.1);
+}
+@media (min-width: 900px){
+    .rooms-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .room{
+        flex: 0 0 calc(50% - 20px);
+        margin: 10px;
+    }
+}
+@media(min-width: 1200px){
+    .rooms-container{
+        flex-direction: column;
+    }
+    .room{
+        display: flex;
+        padding-bottom: 0;
+        margin: 20px 0;
+    }
+    .room-image{
+        flex: 1;
+    }
+    .room-image img{
+        height: 100%;
+    }
+    .room-text{
+        flex: 1;
+    }
+    .room:nth-child(eve){
+        flex-direction: row-reverse;
+    }
+}
+
+/* customers */
+
+.customers{
+    margin-top: 40px;
+    padding:  7px;
+    background: linear-gradient(rgba(0.5, 0.5, 0.5, 0.5), rgba(0.5, 0.5, 0.5, 0.5)), url("https://cdn.business2community.com/wp-content/uploads/2013/05/customer-satisfaction-hotel-guest-experience.jpg") center/cover no-repeat fixed;
+}
+.customer{
+    background: #fff;
+    padding: 35px;
+    text-align: center;
+    margin: 24px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+    transition: var(--transition);
+}
+.rating{
+    margin: 10px 0;
+    color: var(--blue);
+    font-size: 25px
+}
+.customer h3{
+    font-size: 30px;
+    margin-top: 10px
+}
+.customer p{
+    opacity: 0.7;
+    line-height: 1.8;
+    width: 60%;
+    margin: 0 auto;
+}
+.customer img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 25px auto;
+}
+.customer span{
+    font-weight: 700;
+    opacity: 0.7;
+}
+.customer:hover{
+    transform: translateY(-18px);
+}
+@media(min-width: 992px){
+    .customers-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}
+@media(min-width: 1000px){
+    .customers-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width: 500px){
+    .customer p{
+        width: 100%;
+    }
+    .customer img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: 20;
+    padding: 20px 40px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .sec{
+    margin-right: 30px;
+}
+footer .container .sec.aboutus{
+ width: 40%;   
+}
+
+footer .container  h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+footer .container h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 80px;
+    height: 2px;
+    background: #0099ff;
+}
+footer p{
+    color: #999;
+}
+.social{
+    margin-top: 20px;
+    display: flex;
+}
+.social li{
+    list-style: none;
+    
+}
+.social li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:#222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius:4px; 
+}
+.social li a:hover{
+    background: #0099ff;
+}
+.social li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+.quicklinks{
+    position: relative;
+    width: 25%;
+}
+.quicklinks ul li{
+    list-style:none;
+}
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display:inline-block;
+}
+.quicklinks ul li a:hover{
+    color: #0099ff ;
+}
+
+.showModal{
+    position: fixed;
+    background: transparent;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+

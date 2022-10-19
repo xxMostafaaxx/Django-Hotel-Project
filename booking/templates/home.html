@@ -1,0 +1,280 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandarin Oriental</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel = "icon" href = "https://www.flaticon.com/svg/vstatic/svg/608/608912.svg?token=exp=1611865947~hmac=b560a7c250247c8ef38cf9dde06b9535" type = "image/png">
+    <!-- Main StyleSheet -->
+    <link rel="stylesheet" href="{% static 'css/home1.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+#tag {
+  font-family: "Sofia", "sans-serif" ;
+  color: #F00;
+}
+#intro {
+    font-family: "Papyrus" ;
+
+}
+</style>
+</head>
+
+<body>
+        
+
+
+<!-- navbar -->
+<header class="headerest">
+    <a href="#header" class="logo1" style="font-family:Lucida Handwriting;">Mandarin Oriental</a>
+    <div class ="menu-toggle"></div>
+    <nav>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#rooms">Booking</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="static\Login\index.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="clearfix"></div>
+</header>
+<script
+src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.menu-toggle').click(function(){
+        $('.menu-toggle').toggleClass('active')
+        $('nav').toggleClass('active')
+    })
+})
+</script>
+    
+    <!----end navbar----->
+
+
+    
+    <!-- header -->
+    <header class = "header" id = "header">
+       
+        <div class = "head-bottom flex">
+            <h2 class= "tag" id = "tag" style="font-family: Copperplate Gothic; color:wheat ;">Mandarin Oriental IS A NICE PLACE TO STAY IN</h2>
+            <div id="intro">
+                <p style="font-family: Arial Rounded MT;">ONE OF THE MOST LUXURIOUS HOTELS IN THE MIDDLE EAST, IT CONTAINS MANY ROOMS, <br> A RESTURANT & GYM.<br>
+            WUTH MANY SERVICES.<br>
+            LOCATED IN THE CENTER OF THE COUNTRY.</p>
+                    <h3 style="font-family: Arial Rounded MT;">GET STARTED</h3>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+
+
+
+        </div>
+    </header>
+    <!-- end of header -->        
+    
+    <!-- body content  -->
+    
+    <section class = "services sec-width" id = "services">
+        <div class = "title">
+            <h2>services</h2>
+         </div>                   
+    </section><br>
+    
+    <!----Serves----->
+    <div class="headset">
+    <a href="static/restaurant/index.html" style="text-decoration:none; color:white;"><div class="header1">
+           <p class="p1">Food <i class="fas fa-utensils"></i></p>
+
+
+        <p class="p2">Restaurant, cafeteria, bar, nightclub, cafe, food and beverages services<br><br>
+        We have all kinds of food</p>
+    
+            </a>
+        </div>
+    <div class="header2">
+           <p class="p1">Pool <i class="fas fa-swimmer"></i></p>
+            <p class="p2">Swimming is one of the best ways to work out and relax in our hotel. Swimming will leave you all relaxed and rejuvenated.</p>
+
+    
+            </div>
+    
+    <div class="header3">
+           <p class="p1">Cleanliness <i class="fas fa-broom"></i></p>
+            <p class="p2">Cleanliness is supreme when a guest needs to book a hotel. The most significant factor hotels need to focus on is understanding the importance of hygiene and sanitation. Having a clean hotel is one of the essential factors in gaining customer loyalty.</p>
+
+    
+            </div>
+    
+    <div class="header4">
+           <p class="p1">security <i class="fas fa-lock"></i></p>
+            <p class="p2">To prevent or limit property damage
+                To prevent crimes from being committed in less populous areas or during off hours
+                To routinely and visibly patrol, which could deter criminals from even considering hotel </p>
+
+    
+            </div>
+    
+            
+    </div>
+
+
+    <section class = "rooms sec-width" id = "rooms">
+        <div class = "title rooms">
+            <h2 class="roomsh2">rooms</h2>
+        </div>
+        {% for room in rooms %}
+        <div class = "rooms-container">
+            <!-- single room -->
+            <article class = "room">
+                <div class = "room-image">
+                    {% if room.image  %}
+                        <img src="{{room.image.url}}" alt="room-image">
+                    {% else %}
+                    <img src = "https://pix6.agoda.net/hotelImages/178523/-1/de3456e8ab6cb4c5c600d96bd034107d.jpg?s=1024x768" alt = "room image">
+                    {% endif %}
+                </div>
+                <div class = "room-text">
+                    <h3 style="font-family: Arial Rounded MT;"> Mandarin Oriental Room's </h3>
+                    <ul>
+                        <li>
+                            <i class = "fas fa-arrow-alt-circle-right"> <span style="font-family: Copperplate Gothic;"> Number of Beds </span>: {{room.Beds}}</i>
+                            
+                        </li>
+                        <li>
+                            <i class = "fas fa-arrow-alt-circle-right"> <span style="font-family: Copperplate Gothic;"> Type </span>: {{room.category}}</i>
+                            
+                        </li>
+                        <li>
+                            <i class = "fas fa-arrow-alt-circle-right"><span style="font-family: Copperplate Gothic;"> Room Number </span>: {{room.number}}</i>
+                           
+                        </li> 
+                    </ul>
+                    <p></p>
+                    <p class = "rate">
+                        <span style="font-family: Copperplate Gothic; font-size: 30px;color: bisque;"><span style="font-family: Copperplate Gothic;color: bisque; margin-left: 70px;">PRICE</span> : {{room.price}} EGP / Night</span>
+                    </p>
+                    <br>
+                    <br>
+                    <a href="room/{{room.category}}" class="a"><button type = "button" class = "btn">Book</button></a>
+                </div>
+
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+
+
+    <section class = "customers" id = "customers">
+        <div class = "sec-width">
+            <div class = "title">
+                <h2>customers</h2>
+            </div>
+            <div class = "customers-container">
+                <!-- single customer -->
+                <div class = "customer">
+                    <div class = "rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "far fa-star"></i></span>
+                    </div>
+                    <h3>Pool</h3><br><br><br>
+                    <p style="font-family: Arial Rounded MT;">Swimming is one of the best ways to work out and relax in our hotel.<br><br> Swimming will leave you all relaxed and rejuvenated.</p><br><br><br><br><br><br><br>
+                    <img src = "https://adwallpapers.xyz/uploads/posts/73173-swimming-pool-in-hotel-4k-ultra-hd-wallpaper__cityscapes.jpg" alt = "customer image">
+                    <span>Mohamed,  Alex</span>
+                </div>
+                <!-- end of single customer -->
+                <!-- single customer -->
+                <div class = "customer">
+                    <div class = "rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "far fa-star"></i></span>
+                    </div>
+                    <h3>Reception</h3><br>
+                    <p style="font-family: Arial Rounded MT;">welcome and greet guests. answer and direct incoming calls. inform guests of hotel rates and services & make and confirm reservations for guests & ensure proper room allocation & register and check guests in & confirm relevant guest information & verify guest's payment method.</p><br><br>
+                    <img src = "https://www.nevistas.com/ul/4/2019/07/11/06.jpg" alt = "customer image">
+                    <span>Mai & Amr,  Cairo</span>
+                </div>
+                <!-- end of single customer -->
+                <!-- single customer -->
+                <div class = "customer">
+                    <div class = "rating">
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span><i class = "fas fa-star"></i></span>
+                    </div>
+                    <h3>Nice Place</h3><br><br>
+                    <p style="font-family: Arial Rounded MT;">There is nothing more enjoyable than discovering a great hotel room. The bed is soft and comfy, the dressing gowns are fluffy and white, and the bath is deep and inviting. Pure bliss.</p><br><br><br><br><br>
+                    <img src = "https://www.travelguideline.net/wp-content/uploads/2020/02/hotel-room-more-comfortable.jpg" alt = "customer image">
+                    <span>----------------------</span>
+                </div>
+                <!-- end of single customer -->
+            </div>
+        </div>
+    </section>
+    <!-- end of body content -->
+    
+    <!-- footer -->
+<footer>
+<div class="container">
+    <div class="sec aboutus">
+        <h2 class="foot">About Us</h2>
+        <p style="font-family: Arial Rounded MT;">One of the most luxurious hotels in the Middle East, it contains many rooms.<br>
+            A restaurant and a gym.<br>
+            With many services.<br>
+            located in the center of the country.</p> <br>
+        <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="sec quicklinks">
+        <h2 class="foot">Quick Links</h2>
+    <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Terms & Consitions</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="sec contact">
+    <h2 class="foot">Contact Info</h2>
+    <ul class="info">
+        <li><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <span>12 Sidi Gaber ST<br>
+            Alexandria<br>Egypt</span></li><br>
+        
+         <li><span><i class="fa fa-phone" aria-hidden="true"></i></span>
+             +2001003405064</li><br>
+        
+            <li><span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <span>amgad123@gmail.com</span></li>
+        
+        
+        </ul>
+    
+
+</div>
+
+    </footer>
+    <!-- end of footer -->
+</body>
+</html>

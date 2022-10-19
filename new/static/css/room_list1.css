@@ -1,0 +1,150 @@
+/* Root CSS */
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Poppons',sans-serif;
+}
+
+/*navbar CSS */
+header{
+    position: relative;
+    max-width: 1200px;
+    margin:20px auto;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+.logo{
+    color:#ffffff ;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding:0 20px ;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight:700 ;
+    text-decoration: none;
+
+
+}
+nav{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 3px;
+}
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav ul li a.active,
+nav ul li a:hover
+{
+    background: #0099ff;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 10px
+}
+@media (max-width:1200px)
+{
+    header{
+        margin:20px;
+    }
+}
+@media (max-width:768px)
+{
+    .menu-toggle{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background: rgb(0, 0, 0);
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #0099ff;
+    }
+    .menu-toggle:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-toggle.active:before{
+        content: '\f00d';
+    }
+   
+    nav{
+        display: none
+    }
+     nav.active{
+        display: block;
+        width: 100%;
+    }
+    nav.active ul{
+        display: block;
+    }
+    nav.active ul li{
+        margin: 0;
+    }
+}
+
+/* Room Divs */
+.room{
+    
+    width:320px;
+    height:400px;
+    background:rgb(0, 0, 0);
+    box-sizing:border-box;
+    display:inline-block;
+    border:solid;
+    border-color:black;
+    transition:transform 0.75s;
+    margin:49px;
+    border-radius:24px;
+    cursor:pointer;
+    text-decoration: none;
+    color: #0099ff;
+}
+
+.room:hover{
+    transform:scale(1.2);
+    
+}
+
+/* Inside Room Divs */
+h2{
+    font-family: fantasy;
+    text-decoration-color: black;
+    text-align: center
+}
+
+h3{
+    font-family: fantasy;
+    text-decoration-color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+
+img{
+    max-width:100%;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px
+}
+
